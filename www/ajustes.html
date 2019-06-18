@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=4, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/index2.css">
+    <title>Himnario LLDM</title>
+  </head>
+    <body class="ajustes">
+    <nav>
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"></a>
+        <ul id="slide-out" class="sidenav">
+          <li><div class="user-view"><a href="#user"><img class="circle" src="img/icono.png"></a>
+          </div></li>
+          <li><a class="waves-effect" href="index.html">Inicio</a></li>
+          <li><a class="waves-effect" href="himnos.html">Himnos</a></li>
+          <li><a class="waves-effect" href="adicionales.html">Adicionales</a></li>
+          <li><a class="waves-effect" href="epistolas_aaron.html">Epístolas de Aarón J.</a></li>
+          <li><a class="waves-effect" href="epistolas_samuel.html">Epístolas de Samuel J.</a></li>
+          <li><a class="waves-effect" href="epistolas_naason.html">Epístolas de Naasón J.</a></li>
+          <li><a class="waves-effect" href="nueva_era.html">Nueva Era</a></li>
+          <li><a class="waves-effect" href="temas_estudio.html">Estudios B&iacute;blicos</a></li>
+          <li><a class="waves-effect" href="favoritos.html">Favoritos</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="waves-effect" href="ajustes.html">Ajustes</a></li>
+          <li><a class="waves-effect" id="boton_apoyame" href="apoya.html">Apoya la app</a></li>
+          <li><a class="waves-effect" href="" onclick="exitFromApp();">Salir</a></li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><img src="img/menu_icon.png" alt=""></a>
+        </div>
+    </nav>
+    <div class="container">
+      <h3>Ajustes</h3>
+      <p>Desde esta sección, puede personalizar su experiencia.</p>
+        <form action="/action_page.php">
+          <hr>
+          Escoge el tamaño de letra <br>
+          <div id="letra">
+            <p>
+              <label>
+                <input name="tamano" id="normal" value="1" type="radio"  />
+                <span>Normal</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="tamano" id="mediana" value="1.2" type="radio"/>
+                <span style="zoom: 1.4;">Mediana</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input id="grande" name="tamano" value="1.5" type="radio"  />
+                <span style="zoom: 1.7;">Grande</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="tamano" id="extra" value="1.7" type="radio" />
+                <span style="zoom: 2;">Enorme</span>
+              </label>
+            </p>
+          </div>
+          <div id="fondos">
+          <hr>
+          Escoge si quieres que tenga im&aacute;genes.
+            <p>
+              <label>
+                <input id="sin_fondo" name="fondo" value="nada" type="radio" checked />
+                <span>Sin im&aacute;genes</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="fondo" id="ldm" value="ldm" type="radio"  />
+                <span>LDM</span>
+                <img class="responsive-img" src="img/fondos_form/ldm.jpg" alt="">
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="fondo" id="claro" value="claro" type="radio"  />
+                <span>Lisos</span>
+                <img class="responsive-img" src="img/fondos_form/liso.jpg" alt="">
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="fondo" id="nat" value="nat" type="radio"  />
+                <span>Naturaleza</span>
+                <img class="responsive-img" src="img/fondos_form/nat.jpg" alt="">
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="fondo" id="text" value="text" type="radio" />
+                <span>Textura</span>
+                <img class="responsive-img" src="img/fondos_form/text.jpg" alt="">
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="fondo" id="universo" value="universo" type="radio"  />
+                <span>Universo</span>
+                <img class="responsive-img" src="img/fondos_form/uni.jpg" alt="">
+              </label>
+            </p>
+          </div>
+          <hr>
+          <button onclick="store()" class="waves-effect waves-light btn light-blue darken-3" type="button">Guardar ajustes</button>
+        </form>
+        <p style="color: green" id="mensaje">&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+      function store(){
+        var fondos = document.getElementById("fondos").value;
+        if (document.getElementById('claro').checked) {
+          fondos = document.getElementById('claro').value;
+        }
+        if (document.getElementById('universo').checked) {
+          fondos = document.getElementById('universo').value;
+        }
+        if (document.getElementById('ldm').checked) {
+          fondos = document.getElementById('ldm').value;
+        }
+        if (document.getElementById('nat').checked) {
+          fondos = document.getElementById('nat').value;
+        }
+        if (document.getElementById('text').checked) {
+          fondos = document.getElementById('text').value;
+        }
+        if (document.getElementById('sin_fondo').checked) {
+          fondos = document.getElementById('sin_fondo').value;
+        }
+        var letra = document.getElementById("letra").value;
+        if (document.getElementById('normal').checked) {
+          letra = document.getElementById('normal').value;
+        }
+        if (document.getElementById('mediana').checked) {
+          letra = document.getElementById('mediana').value;
+        }
+        if (document.getElementById('grande').checked) {
+          letra = document.getElementById('grande').value;
+        }
+        if (document.getElementById('extra').checked) {
+          letra = document.getElementById('extra').value;
+          
+        }
+        // var inputEmail= document.getElementById("email");
+        localStorage.setItem("fondos", fondos);
+        localStorage.setItem("tamano", letra);
+        // localStorage.setItem("email", inputEmail.value);
+        document.getElementById('mensaje').innerHTML = 'Se guardaron tus ajustes';
+      }
+      
+      if (localStorage.fondos){
+        fondoValor = localStorage.fondos;
+        document.getElementById(fondoValor).checked = true;
+      };
+
+      (function($){
+      if (localStorage.tamano){
+        TamanoL = localStorage.tamano;
+      };
+        // TamanoL= $('input[type=radio][name=tamano]:checked').attr('id');
+        console.log(TamanoL);
+        // document.getElementById(TamanoL).checked = true;
+      })(jQuery);
+    </script>
+  </body>
+</html>
