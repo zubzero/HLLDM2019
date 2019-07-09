@@ -42,6 +42,12 @@
           <div id="letra">
             <p>
               <label>
+                <input name="tamano" id="chica" value="0.7" type="radio"  />
+                <span>Chica</span>
+              </label>
+            </p>
+            <p>
+              <label>
                 <input name="tamano" id="normal" value="1" type="radio"  />
                 <span>Normal</span>
               </label>
@@ -74,7 +80,7 @@
                 <span>Sin im&aacute;genes</span>
               </label>
             </p>
-            <p>
+            <p style="display: none;">
               <label>
                 <input name="fondo" id="ldm" value="ldm" type="radio"  />
                 <span>LDM</span>
@@ -88,21 +94,21 @@
                 <img class="responsive-img" src="img/fondos_form/liso.jpg" alt="">
               </label>
             </p>
-            <p>
+            <p style="display: none;">
               <label>
                 <input name="fondo" id="nat" value="nat" type="radio"  />
                 <span>Naturaleza</span>
                 <img class="responsive-img" src="img/fondos_form/nat.jpg" alt="">
               </label>
             </p>
-            <p>
+            <p style="display: none;">
               <label>
                 <input name="fondo" id="text" value="text" type="radio" />
                 <span>Textura</span>
                 <img class="responsive-img" src="img/fondos_form/text.jpg" alt="">
               </label>
             </p>
-            <p>
+            <p style="display: none;">
               <label>
                 <input name="fondo" id="universo" value="universo" type="radio"  />
                 <span>Universo</span>
@@ -172,9 +178,10 @@
       (function($){
       if (localStorage.tamano){
         TamanoL = localStorage.tamano;
+        console.log(TamanoL);
       };
         // TamanoL= $('input[type=radio][name=tamano]:checked').attr('id');
-        console.log(TamanoL);
+        
         // document.getElementById(TamanoL).checked = true;
       })(jQuery);
     </script>
