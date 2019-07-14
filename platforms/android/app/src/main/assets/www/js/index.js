@@ -35,10 +35,11 @@ function exitFromApp(){
     }
 };
 function onBackKeyDown(){
-    if( confirm("¿Realmente desea salir de la aplicación?") )
-    {
-        navigator.app.exitApp();
-    }
-    // return false;
+    window.history.back();
+    // if( confirm("¿Realmente desea salir de la aplicación?") )
+    // {
+    //     navigator.app.exitApp();
+    // }
+    // // return false;
 };
 app.initialize();
