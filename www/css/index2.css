@@ -107,7 +107,7 @@ nav .brand-logo{
   width: 72%;
   font-size: 16px;
   padding:  0 0 0 45px;
-  border: 1px solid #ddd;
+  border: 1px solid #c5c5c5;
   border-radius: 10px;
   margin-bottom: 12px;
   margin-top: 15px;
@@ -163,6 +163,9 @@ label{color: #0b2b67}
     position: relative;
     top: -67px;
 }*/
+nav .sidenav-trigger i{
+  font-size: 30px;
+}
 .blue.darken-4{
   opacity: .5;
   background-color: #868686 !important;
@@ -179,9 +182,10 @@ label{color: #0b2b67}
   position: fixed;
   z-index: 99;
   background-color: #ececec;
-  color: #333;
+  color: #122e93;
   height: 46px;
   margin: 10px 2%;
+  box-shadow: inset #8c8c8c -2px 1px 3px 1px;
 }
 .lista h5{
   position: relative;
@@ -233,7 +237,7 @@ display: none;
   -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
   transform: rotate(-45deg);
 }
-#himnos_lista li a{font-size: 17px; color: #5f5f5f; font-weight: 500}
+#himnos_lista li a{font-size: 17px; color: #252525; font-weight: 500}
 .lista .collection-item, .epistolas .collection-item{position: relative;}
 .pro:after {
  content: "PRO";

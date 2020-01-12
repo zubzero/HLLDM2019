@@ -14,6 +14,7 @@
     });
     $(".tabs-content").css('height',maxHeight+'px');
     };
+    $(".sidenav-trigger").html( "<i class='large material-icons'>dehaze</i>" );
 })(jQuery);
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
@@ -23,7 +24,6 @@
   });
 // Cambiar tamaño de la fuente
 jQuery.noConflict();
-
 // Cambiar texto a menu de apoya
 // document.getElementById('boton_apoyame').innerHTML = '¿Desea apoyar la app?';
 // Cambiar fondo
