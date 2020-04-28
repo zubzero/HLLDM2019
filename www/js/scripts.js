@@ -3,6 +3,7 @@
         $('.sidenav').sidenav({
         	draggable: true
         });
+        $( ".btn" ).before( "<p>&nbsp;</p><p>&nbsp;</p>" );
 	    $('.tabs').tabs({swipeable: true});
         resizeTab();
         $( window ).resize(function() { resizeTab(); });
@@ -21,6 +22,9 @@
     var instances = M.Dropdown.init(elems, {
     	constrainWidth: true
     });
+    var elems1 = document.querySelectorAll('.modal');
+    var instances1 = M.Modal.init(elems1);
+    // instances1.open();
   });
 // Cambiar tamaño de la fuente
 jQuery.noConflict();

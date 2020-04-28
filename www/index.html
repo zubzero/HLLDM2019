@@ -24,20 +24,56 @@
           <li><a class="waves-effect" href="temas_estudio.html">Estudios B&iacute;blicos</a></li>
           <li><a class="waves-effect" href="nueva_era.html">Nueva Era</a></li>
           <li><a class="waves-effect" href="favoritos.html">Favoritos</a></li>
-          <li><div class="divider"></div></li>
           <li><a class="waves-effect" href="ajustes.html">Ajustes</a></li>
           <li><a class="waves-effect" id="boton_apoyame" href="apoya.html">Apoya la app</a></li>
           <li><a class="waves-effect" href="" onclick="exitFromApp();">Salir</a></li>
         </ul>
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><img src="img/menu_icon.png" alt=""></a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class='large material-icons'>dehaze</i></a>
         </div>
     </nav>
 
-    <div class="container"><footer><small>V.2.0.7</small></footer></div>
+    <div class="container">
+       <!-- Modal Trigger -->
+    <!-- <a id="boton" class="waves-effect waves-light modal-trigger" href="#modal1"><i class='large material-icons'>dehaze</i></a> -->
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content section">
+        <div class="center">
+          <h4><b>¡Aviso Importante!</b></h4><br>
+        <p><b>ACTUALIZACIÓN POR DISPOSICIÓN APOSTOLICA</b></p>
+        <br>
+        <P>El Ministerio De Ortodoxia, realizó cambios y ajustes en todo el contenido de el himnario.</P>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="actualizacion.html" class="modal-close waves-effect waves-light btn indigo darken-4">Ver detalles</a>
+        <a href="javascript:SPrimeraVez()" class="modal-close waves-effect waves-light btn blue accent-4">Ver Despues</a>
+      </div>
+    </div>
+    <footer><small>V.2.0.7</small></footer>
+  </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script>
+      function SPrimeraVez() {
+        // localStorage.setItem('PrimeraVez', 0);  Esto es para actualizacion.html
+        localStorage.setItem('PrimeraVez', 1);
+      };
+      var Pvez = localStorage.getItem('PrimeraVez'); 
+      console.log(Pvez);
+      if (Pvez == 1) {
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.modal');
+          var instances = M.Modal.init(elems, {dismissible:false});
+          var elemento = document.querySelector('#modal1');
+          var instance = M.Modal.getInstance(elemento, {dismissible:false});
+          instance.open();
+        });
+      }
+    </script>
   </body>
 </html>

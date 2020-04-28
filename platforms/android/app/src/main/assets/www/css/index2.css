@@ -17,6 +17,9 @@
   font-weight: 400;
   src: url(fonts/material.woff2) format('woff2');
 }
+.sidenav li > a{
+  color: #fff
+}
 .tabs-content.carousel .carousel-item { height:auto; }
 footer{
   text-align: center;
@@ -84,17 +87,33 @@ nav .brand-logo{
 .dropdown-content{
 	width: 250px !important;
 }
+.collection-header h4{
+  margin-top: 30px;
+}
 .alfabetico{
   position: fixed;
-  right: 20px;
+  top: 50%;
+  right: 0;
+  margin-top: -264px;
   bottom: 10px;
-  z-index: 99;
+  z-index: 100;
   background-color: #fff;
   width: 30px;
   height: auto;
   border-radius: 30px;
   text-align: center;
   border: 1px solid #ccc;
+}
+.Alfa_adc{
+  top: 24%;
+  margin-top: unset;
+  bottom: unset;
+}
+.list-item__subtitle{
+  color: #ccc;
+}
+.list-item__subtitle, .subtitulo{
+  margin-left: 14px !important;
 }
 .nav-letra{
   font-size: 16px;
@@ -164,7 +183,7 @@ label{color: #0b2b67}
     top: -67px;
 }*/
 nav .sidenav-trigger i{
-  font-size: 30px;
+  font-size: 25px;
 }
 .blue.darken-4{
   opacity: .5;
@@ -180,12 +199,16 @@ nav .sidenav-trigger i{
 }
 .lista #myInput{
   position: fixed;
+  top: 42px;
+  left: -10px;
+  width: 100%;
   z-index: 99;
   background-color: #ececec;
+  border: 0;
   color: #122e93;
   height: 46px;
+  border-radius: 0;
   margin: 10px 2%;
-  box-shadow: inset #8c8c8c -2px 1px 3px 1px;
 }
 .lista h5{
   position: relative;
@@ -193,12 +216,14 @@ nav .sidenav-trigger i{
   padding-left: 30px;
   color: #08258f;
 }
-#himnos_lista{
+/*.himnos_lista20{
+  padding-top: 90px;
+  display: inline-block;
   position: relative;
-  top: 80px;
-}
+  top: 150px;
+}*/
 .sidenav{
-  width: 250px;
+  width: 281px;
 }
 nav .sidenav-trigger{
   margin: 0;
@@ -237,7 +262,7 @@ display: none;
   -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
   transform: rotate(-45deg);
 }
-#himnos_lista li a{font-size: 17px; color: #252525; font-weight: 500}
+#himnos_lista li a, .himnos_lista20 li a{font-size: 17px; color: #252525; font-weight: 500}
 .lista .collection-item, .epistolas .collection-item{position: relative;}
 .pro:after {
  content: "PRO";
