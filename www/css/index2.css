@@ -66,13 +66,32 @@ footer{
   padding: 12px  0;
 }
 .cnt img{margin: 10px 0;}
-.cnt, p, .just, .right, .left{margin: 0 !important;}
-.just .azul, .cnt .azul, .cnt .nblu{color: #003973;}
-.nblu{font-size: 16px;}
-.isbn{
+.cnt, p, .just, .right, .left{margin: 0 !important; font-size: 1rem}
+.just .azul, .cnt .azul, .cnt .nblu, .azul{color: #002C69 !important;}
+/*.nblu{font-size: 0.7rem;}*/
+.isbn, .copy{
 	text-align: right;
 	color: #ccc;
-    font-size: x-small;
+    font-size: 8px;
+}
+.ocho{
+  font-size: 83%;
+}
+.gris{
+  color:#969696;
+}
+#flecha_i img{
+  height: 29px;
+    float: left;
+    position: relative;
+    left: -8px;
+    top: 12px;
+    width: 35px;/*
+  position: absolute;
+    right: 41px;
+    font-size: 30px;
+    top: 13px;
+    font-weight: 700;*/
 }
 nav .brand-logo{
 	font-size: 1.7rem;
@@ -91,6 +110,9 @@ nav .brand-logo{
  }
  .espacio{
   height: 95px;
+ }
+ .diez{
+  font-size: 85%;
  }
  nav{
 background: rgb(0,0,46);
@@ -114,7 +136,7 @@ background: linear-gradient(90deg, rgba(0,0,46,1) 0%, rgba(2,64,128,1) 48%, rgba
   top: 50%;
   right: 0;
   margin-top: -264px;
-  bottom: 110px;
+  /*bottom: 110px;*/
   z-index: 100;
   background-color: #fff;
   width: 30px;
@@ -240,7 +262,8 @@ nav .sidenav-trigger i{
   z-index: 999999 !important;
 }
 .section h4{
-  font-weight: 600;
+  font-weight: 300;
+    line-height: 30px;
 }
 .lista h5{
   position: relative;
@@ -254,9 +277,6 @@ nav .sidenav-trigger i{
 }
 .sidenav{
   width: 281px;
-}
-nav .sidenav-trigger{
-  margin: 0;
 }
 h4{
   color: #08258f;
@@ -311,7 +331,7 @@ display: none;
     text-shadow: #fff 2px 2px 2px;
 }
 .no_zoom{zoom: unset !important;}
-.nblu:first-of-type{margin: 15% 0 !important;}
+/*.nblu:first-of-type{margin: 15% 0 !important;}*/
 .tith, .cnueve{display: none}
 #donativo{zoom: 1.5;}
 *

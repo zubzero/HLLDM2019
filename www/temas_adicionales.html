@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=4, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/index2.css">
+    <title>Himnario LLDM</title>
+  </head>
+    <body>
+    <nav>
+        <div class="nav-wrapper container">
+        <ul id="slide-out" class="sidenav">
+          <li><div class="user-view"><a href="#user"><img class="circle" src="img/icono.png"></a>
+          </div></li>
+          <li><a class="waves-effect" href="himnos.html">Himnos</a></li>
+          <li><a class="waves-effect" href="adicionales.html">Adicionales</a></li>
+          <li><a class="waves-effect" href="nueva_era.html">Nueva Era</a></li>
+          <li><a class="waves-effect" href="epistolas_aaron.html">Cartas de Aarón J.</a></li>
+          <li><a class="waves-effect" href="epistolas_samuel.html">Cartas de Samuel J.</a></li>
+          <li><a class="waves-effect" href="epistolas_naason.html">Cartas de Naasón J.</a></li>
+          <li><a class="waves-effect" href="temas_estudio.html">Estudios B&iacute;blicos</a></li>
+          <li><a class="waves-effect" href="nosotros.html">Nuestra Identidad</a></li>
+          <li><a class="waves-effect" href="favoritos.html">Favoritos</a></li>
+          <li><a class="waves-effect" id="boton_apoyame" href="apoya.html">Apoya la app</a></li>
+          <li><a class="waves-effect" href="ajustes.html">Ajustes</a></li>
+          <li><a class="waves-effect" href="" onclick="exitFromApp();">Salir</a></li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class='large material-icons'>dehaze</i></a>
+        </div>
+    </nav>
+
+    <div class="container lista">
+      <a href="#" id="js_up" class="boton-subir">
+        <img src="img/arrow_top.png" width="40" height="40" alt="">
+      </a>
+
+      <ul id="himnos_lista" class="collection with-header himnos_lista20">
+        <p class="cnt">Regrese y escriba un tema en el buscador.</p><br>
+        <li class="collection-item">
+          <a >1.  ADVENIMIENTO</a>
+          <p><span class="list-item__subtitle">Segunda venida del Señor Jesucristo.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >2.  ADORACIÓN</a>
+          <p><span class="list-item__subtitle">Culto supremo de veneración a Dios.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >3.  ALABANZA</a>
+          <p><span class="list-item__subtitle">Loa, Gloria, Loor, Elogio.</span></p>
+        </li>
+        <li class="collection-item">
+          <a>4.  AMANECER</a>
+          <p><span class="list-item__subtitle">Alabanzas de adoración matutina.</span></p>
+        </li>
+        <li class="collection-item">
+          <a>5.  AMISTAD</a>
+          <p><span class="list-item__subtitle">Amigos del Señor.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >6.  AMOR</a>
+          <p><span class="list-item__subtitle">Caridad de Dios.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >7.  AVIVAMIENTO</a>
+          <p><span class="list-item__subtitle">Recibir o Reavivar el Espíritu Santo.</span></p>
+        </li>
+        <li class="collection-item">
+          <a>8.  BAUTISMO</a>
+          <p><span class="list-item__subtitle">Renacer, Sumergir, Sepultar en agua.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >9.  BIBLIA</a>
+          <p><span class="list-item__subtitle">Sagradas Escrituras.</span></p>
+        </li>
+        <li class="collection-item">
+          <a>10.  BIENVENIDA</a>
+          <p><span class="list-item__subtitle">Aceptar o recibir a los santos.</span></p>
+        </li>
+        <li class="collection-item">
+          <a>11.  COMUNIÓN</a>
+          <p><span class="list-item__subtitle">Compañerismo y unidad espiritual.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >12.  CONFIANZA</a>
+          <p><span class="list-item__subtitle">Fe, esperanza y seguridad en el Señor.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >13.  CONSAGRACIÓN</a>
+          <p><span class="list-item__subtitle">Entrega, Santificación, Dedicación.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >14.  CORO</a>
+          <p><span class="list-item__subtitle">Estribillo de ánimo y fervor.</span></p>
+        </li>
+        <li class="collection-item">
+          <a>15.  DEDICACIÓN</a>
+          <p><span class="list-item__subtitle">Inauguración del templo.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >16.  DESPEDIDA</a>
+          <p><span class="list-item__subtitle">Buenos deseos a los santos.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >17.  DIVINIDAD</a>
+          <p><span class="list-item__subtitle">Esencia de Dios.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >18.  DUERMEN</a>
+          <p><span class="list-item__subtitle">Mueren o reposan en Cristo.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >19.  ELECCIÓN</a>
+          <p><span class="list-item__subtitle">Reconocimiento al Apostol de Dios.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >20.  ESPERANZA</a>
+          <p><span class="list-item__subtitle">Galardón, Fin de la fe, Anhelo, Meta.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >21.  EXHORTACIÓN</a>
+          <p><span class="list-item__subtitle">Amonestación, Incitación, Consejo.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >22.  GOZO.</a>
+          <p><span class="list-item__subtitle">Alegría, Júbilo espiritual.</span></p>
+        </li>
+        <li class="collection-item">
+          <a>23.  GRACIA</a>
+          <p><span class="list-item__subtitle">Don de Dios, bondad inmerecida.</span></p>
+        </li>
+        <li class="collection-item">
+          <a>24.  GRATITUD</a>
+          <p><span class="list-item__subtitle">Agradecer favores de Dos.</span></p>
+        </li>
+        <li class="collection-item">
+          <a>25.  HONRA</a>
+          <p><span class="list-item__subtitle">Buena opinión, Reconocimiento.</span></p>
+        </li>
+        <li class="collection-item">
+          <a>26.  IDOLATRÍA</a>
+          <p><span class="list-item__subtitle">Rechazar el culto a ídolos.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >27.  INTERCESIÓN</a>
+          <p><span class="list-item__subtitle">Ruego, Súplica, Abogar, Mediar.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >28.  JUVENTUD</a>
+          <p><span class="list-item__subtitle">Ánimo a los jóvenes cristianos.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >29.  LIBERALIDAD</a>
+          <p><span class="list-item__subtitle">Generosidad, Dador alegre.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >30.  LLAMAMIENTO</a>
+          <p><span class="list-item__subtitle">Invitación, Sentir el amor de Dios.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >31.  LUCHAR</a>
+          <p><span class="list-item__subtitle">Combatir, Resistir por el Señor.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >32.  MATRIMONIO</a>
+          <p><span class="list-item__subtitle">Bodas o Nupcias entre cristianos.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >33.  MEDITACION</a>
+          <p><span class="list-item__subtitle">Analizar, Pensar, Reconocerse.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >34.  NIÑEZ</a>
+          <p><span class="list-item__subtitle">Simiente santa, Niños de Cristo.</span></p>
+        </li>
+        <li class="collection-item">
+          <a>35.  OBREROS</a>
+          <p><span class="list-item__subtitle">Sembradores, Mensajeros.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >36.  ORACIÓN</a>
+          <p><span class="list-item__subtitle">Petición con ruego al Señor.</span></p>
+        </li>
+        <li class="collection-item">
+          <a>37.  PASIÓN</a>
+          <p><span class="list-item__subtitle">Calvario, Crucifixión del Señor.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >38.  PERDÓN</a>
+          <p><span class="list-item__subtitle">Remisión, Salvación, Misericordia.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >39.  PERSECUCIÓN</a>
+          <p><span class="list-item__subtitle">Sufrir tribulación por el Señor.</span></p>
+        </li>
+        <li class="collection-item">
+          <a>40.  PERSEVERANCIA</a>
+          <p><span class="list-item__subtitle">Constancia, Fidelidad al Señor.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >41.  REPRENSIÓN</a>
+          <p><span class="list-item__subtitle">Amonestación, Reclamo del Señor.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >42.  RESTAURACIÓN</a>
+          <p><span class="list-item__subtitle">Restablecer, Volver al primer estado.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >43.  SALMOS</a>
+          <p><span class="list-item__subtitle">Poemas, Cánticos de los S.d.D.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >44.  SANIDAD</a>
+          <p><span class="list-item__subtitle">Salud por la fe, Milagro.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >45.  SANTA CENA</a>
+          <p><span class="list-item__subtitle">Memorial del sacrificio de Cristo.</span></p>
+        </li>
+        <li class="collection-item">
+          <a >46.  SÚPLICA</a>
+          <p><span class="list-item__subtitle">Ruego insistente por el perdón.</span></p>
+        </li>
+        
+      </ul>
+      <!-- <div class="barra_azul"></div> -->
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+      (function($) { 
+          $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#himnos_lista li").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+      $(window).scroll(function(){
+        if($(this).scrollTop() > 300){ //condición a cumplirse cuando el usuario aya bajado 301px a más.
+          $("#js_up").slideDown(300); //se muestra el botón en 300 mili segundos
+        }else{ // si no
+          $("#js_up").slideUp(300); //se oculta el botón en 300 mili segundos
+        }
+      });
+          //creamos una función accediendo a la etiqueta i en su evento click
+      $("#js_up i").on('click', function (e) { 
+        e.preventDefault(); //evita que se ejecute el tag ancla (<a href="#">valor</a>).
+        $("body,html").animate({ // aplicamos la función animate a los tags body y html
+          scrollTop: 0 //al colocar el valor 0 a scrollTop me volverá a la parte inicial de la página
+        },700); //el valor 700 indica que lo ara en 700 mili segundos
+        return false; //rompe el bucle
+      });
+      $('.scrollspy').scrollSpy();
+    })(jQuery);
+    </script>
+  </body>
+</html>

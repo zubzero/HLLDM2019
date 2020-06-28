@@ -15,7 +15,8 @@
     });
     $(".tabs-content").css('height',maxHeight+'px');
     };
-    $(".sidenav-trigger").html( "<i class='large material-icons'>dehaze</i>" );
+    $('.collapsible').collapsible();
+    // $(".sidenav-trigger").html( "<i class='large material-icons'>dehaze</i>" );
 })(jQuery);
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
