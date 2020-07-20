@@ -225,6 +225,7 @@ label{color: #0b2b67}
 }*/
 nav .sidenav-trigger i{
   font-size: 25px;
+  text-shadow: none !important;
 }
 .blue.darken-4{
   opacity: .5;
