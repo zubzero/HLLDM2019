@@ -17,6 +17,9 @@
     };
     $('.collapsible').collapsible();
     // $(".sidenav-trigger").html( "<i class='large material-icons'>dehaze</i>" );
+      $('#slide-out').find('li a')[9].textContent = 'Ajustes de Ortodoxia';
+    // funciones para poner los botones de regresar y adelantar
+    $(".himno .btn-floating").html('<a class="btn-floating btn waves-effect waves-light blue darken-4" href="index.html"><img src="img/inicio.png"></a>').attr("href", "index.html");
 })(jQuery);
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
@@ -80,5 +83,22 @@ jQuery.noConflict();
     if (fondo === 'nada') {
         (function($){
             $('.himno .cnt, .himno .just, .himno .right, .himno .left, .himno .nblu').css({'zoom': letra_tamano});
-        })(jQuery);
+            })(jQuery);
     };
+jQuery(document).ready(function() {
+    var url = window.location.pathname;
+    var num = jQuery(".thimno").text().replace(/\s/g, "");
+    var numsum = Number(num);
+    console.log(numsum);
+    if (numsum > 0 || numsum <= 629 ) {
+        var mnum =numsum+1
+        jQuery('#siguiente').attr('href', mnum+'.html').delay(800 ).fadeIn( 400 );
+    };
+    if (numsum === 2 || numsum <= 630 ) {
+        var mnum =numsum-1
+        jQuery('#atras').attr('href', mnum+'.html').delay( 800 ).fadeIn( 400 );
+    };
+    if (numsum === 1) {
+        jQuery("#atras").hide();
+    };
+});
