@@ -61,6 +61,10 @@ footer{
 #siguiente{
   right: -15px;
 }
+#siguiente:hover, #atras:hover{
+  background-color: #5b6092 !important;
+  color: #fff;
+}
 #atras{
   left: -15px;
 }
@@ -76,7 +80,7 @@ footer{
 .btn-floating{
 	position: fixed;
     right: 20px;
-    bottom: 10px;
+    bottom: 20px;
     opacity: 1;
 }
 .btn-floating img{
