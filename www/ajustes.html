@@ -24,7 +24,7 @@
           <li><a class="waves-effect" href="epistolas_naason.html">Cartas de Naasón J.</a></li>
           <li><a class="waves-effect" href="temas_estudio.html">Estudios B&iacute;blicos</a></li>
           <li><a class="waves-effect" href="nosotros.html">Nuestra Identidad</a></li>
-          <li><a class="waves-effect" href="nosotros.html">Correcciones de Ortodoxia</a></li>
+          <li><a class="waves-effect" href="actualizacion.html">Correcciones de Ortodoxia</a></li>
           <li><a class="waves-effect" href="favoritos.html">Favoritos</a></li>
           <hr>
           <li><a class="waves-effect" id="boton_apoyame" href="apoya.html">Apoya la app</a></li>
@@ -44,31 +44,31 @@
           <div id="letra">
             <p>
               <label>
-                <input name="tamano" id="chica" value="0.7" type="radio"  data-memo/>
+                <input name="tamano" id="chica" value="0.7" type="radio" />
                 <span>Chica</span>
               </label>
             </p>
             <p>
               <label>
-                <input name="tamano" id="normal" value="1" type="radio" data-memo />
+                <input name="tamano" id="normal" value="1" type="radio" checked />
                 <span>Normal</span>
               </label>
             </p>
             <p>
               <label>
-                <input name="tamano" id="mediana" value="1.2" data-memo type="radio"/>
+                <input name="tamano" id="mediana" value="1.2" type="radio"/>
                 <span style="zoom: 1.4;">Mediana</span>
               </label>
             </p>
             <p>
               <label>
-                <input id="grande" name="tamano" value="1.5" data-memo type="radio"  />
+                <input id="grande" name="tamano" value="1.5" type="radio"  />
                 <span style="zoom: 1.7;">Grande</span>
               </label>
             </p>
             <p>
               <label>
-                <input name="tamano" id="extra" value="1.7" data-memo type="radio" />
+                <input name="tamano" id="extra" value="1.7" type="radio" />
                 <span style="zoom: 2;">Enorme</span>
               </label>
             </p>
@@ -78,41 +78,41 @@
           Escoge si quieres que tenga im&aacute;genes.
             <p>
               <label>
-                <input id="sin_fondo" name="fondo" value="nada" data-memo type="radio"  />
+                <input id="sin_fondo" name="fondo" value="nada" type="radio" checked />
                 <span>Sin im&aacute;genes</span>
               </label>
             </p>
             <p style="display: none;">
               <label>
-                <input name="fondo" id="ldm" value="ldm" data-memo type="radio"  />
+                <input name="fondo" id="ldm" value="ldm" type="radio"  />
                 <span>LDM</span>
                 <img class="responsive-img" src="img/fondos_form/ldm.jpg" alt="">
               </label>
             </p>
             <p>
               <label>
-                <input name="fondo" id="claro" value="claro" data-memo type="radio"  />
+                <input name="fondo" id="claro" value="claro" type="radio"  />
                 <span>Lisos</span>
                 <img class="responsive-img" src="img/fondos_form/liso.jpg" alt="">
               </label>
             </p>
             <p style="display: none;">
               <label>
-                <input name="fondo" id="nat" value="nat" data-memo type="radio"  />
+                <input name="fondo" id="nat" value="nat" type="radio"  />
                 <span>Naturaleza</span>
                 <img class="responsive-img" src="img/fondos_form/nat.jpg" alt="">
               </label>
             </p>
             <p style="display: none;">
               <label>
-                <input name="fondo" id="text" value="text" data-memo type="radio" />
+                <input name="fondo" id="text" value="text" type="radio" />
                 <span>Textura</span>
                 <img class="responsive-img" src="img/fondos_form/text.jpg" alt="">
               </label>
             </p>
             <p style="display: none;">
               <label>
-                <input name="fondo" id="universo" value="universo" data-memo type="radio"  />
+                <input name="fondo" id="universo" value="universo" type="radio"  />
                 <span>Universo</span>
                 <img class="responsive-img" src="img/fondos_form/uni.jpg" alt="">
               </label>
@@ -176,12 +176,27 @@
         jQuery("button").text('Se guardaron tus ajustes');
       }
       
-      if (localStorage.fondos){
-        fondoValor = localStorage.fondos;
-        document.getElementById(fondoValor).checked = true;
-      };
-
+      // if (localStorage.fondos){
+      //   fondoValor = localStorage.getItem('fondos');
+      //   document.getElementById(fondoValor).checked = true;
+      // };
       (function($){
+        var fondo = localStorage.getItem('fondos');
+        var tamano = localStorage.getItem('tamano');
+        if (fondo === 'nada') {  $('#nada').attr('checked', true);
+          };
+        if (fondo === 'claro') {  $('#claro').attr('checked', true);
+          };
+        if (tamano === '0.7') {  $('#chica').attr('checked', true);
+          };
+        if (tamano === '1') {  $('#normal').attr('checked', true);
+          };
+        if (tamano === '1.2') {  $('#mediana').attr('checked', true);
+          };
+        if (tamano === '1.5') {  $('#grande').attr('checked', true);
+          };
+        if (tamano === '1.7') {  $('#extra').attr('checked', true);
+          };
       if (localStorage.tamano){
         TamanoL = localStorage.tamano;
         console.log(TamanoL);
@@ -190,32 +205,6 @@
         
         // document.getElementById(TamanoL).checked = true;
       })(jQuery);
-memo_form = (function() {
-    document.addEventListener("DOMContentLoaded", function() { load() });
-    window.addEventListener('beforeunload', function() { save() });
-    function save() {
-        var memo = { fields: {}, clicks: [] };
-        document.querySelectorAll("[data-memo]:not([type='checkbox']):not([type='radio'])").forEach(function(item) {
-            memo.fields[item.id] = item.value;
-        });
-        document.querySelectorAll("[data-memo][type='checkbox']:checked,[data-memo][type='radio']:checked").forEach(function(item) {
-            memo.clicks.push(item.id)
-        });
-        localStorage.setItem("memo", JSON.stringify(memo));
-    }
-    function load(f) {
-        var memo = JSON.parse(localStorage.getItem("memo"));
-        for (x in memo.fields) {
-            document.getElementById(x).value = (f ? "" : memo.fields[x])
-        }
-        for (x in memo.clicks) {
-            document.getElementById(memo.clicks[x]).checked = f ? false : true;
-        }
-    }
-    return {
-        clean: function() { load(1) }
-    }
-}());
     </script>
   </body>
 </html>

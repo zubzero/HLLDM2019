@@ -17,7 +17,7 @@
     };
     $('.collapsible').collapsible();
     // $(".sidenav-trigger").html( "<i class='large material-icons'>dehaze</i>" );
-      $('#slide-out').find('li a')[9].textContent = 'Correcciones Ortodoxia';
+    $('#slide-out').find('li a')[9].textContent = 'Correcciones Ortodoxia';
     // funciones para poner los botones de regresar y adelantar
     $(".himno .btn-floating").html('<a class="btn-floating btn waves-effect waves-light blue darken-4" href="index.html"><img src="img/inicio.png"></a>').attr("href", "index.html");
 })(jQuery);
@@ -92,10 +92,10 @@ jQuery(document).ready(function() {
     console.log(numsum);
     if (numsum > 0 || numsum <= 629 ) {
         var mnum =numsum+1
-        jQuery('#siguiente').attr('href', mnum+'.html').delay(800 ).fadeIn( 400 );
+        jQuery('#siguiente').attr('href', mnum+'.html').delay(500 ).fadeIn( 400 );
     };
     if (numsum === 2 || numsum <= 630 ) {
         var mnum =numsum-1
-        jQuery('#atras').attr('href', mnum+'.html').delay( 800 ).fadeIn( 400 );
+        jQuery('#atras').attr('href', mnum+'.html').delay( 500 ).fadeIn( 400 );
     };
 });
