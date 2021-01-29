@@ -43,3 +43,14 @@ function onBackKeyDown(){
     // // return false;
 };
 app.initialize();
+(function($){
+    var url2 = window.location.pathname;
+    var num2 = jQuery(".thimno").text().replace(/\s/g, "");
+    var numsum2 = Number(num2);
+    if (numsum2 < 630) {
+        $( "<a id='siguiente' class='waves-effect waves-light blue darken-4' href=''><i class='small material-icons'>chevron_right</i></a>").insertAfter( ".thimno");
+    };
+    if (numsum2 > 1 ) {
+        $( "<a id='atras' class='waves-effect waves-light blue darken-4' href=''><i class='large material-icons'>chevron_left</i></a>").insertAfter(".thimno");
+    }
+})(jQuery);
