@@ -1,19 +1,17 @@
 {
-  "version": 1,
+  "version": 2,
   "artifactType": {
     "type": "APK",
     "kind": "Directory"
   },
   "applicationId": "com.himnario.mx",
-  "variantName": "release",
+  "variantName": "processReleaseResources",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
-      "properties": [],
-      "versionCode": 20205,
-      "versionName": "2.2.5",
-      "enabled": true,
+      "versionCode": 20500,
+      "versionName": "2.5",
       "outputFile": "app-release.apk"
     }
   ]

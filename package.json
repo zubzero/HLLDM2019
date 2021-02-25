@@ -14,11 +14,15 @@
     "cordova-plugin-network-information": "^2.0.1"
   },
   "devDependencies": {
+    "cordova-ios": "^6.2.0",
     "cordova-plugin-whitelist": "1"
   },
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {}
-    }
+    },
+    "platforms": [
+      "ios"
+    ]
   }
 }

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<widget id="com.himnario.mx" version="2.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.himnario.mx" version="2.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Himnario LLDM</name>
     <description>
         Nueva versión del himnario lldm
@@ -19,7 +19,7 @@
     <allow-intent href="geo:*" />
     <preference name="Orientation" value="portrait" />
     <platform name="android">
-        <preference name="android-targetSdkVersion" value="28"/>
+        <preference name="android-targetSdkVersion" value="29"/>
         <allow-intent href="market:*" />
         <preference name="SplashScreenBackgroundColor" value="#ffffff" />
         <icon density="ldpi" src="res/icon/android/icon-36-ldpi.png" />
